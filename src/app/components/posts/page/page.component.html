@@ -1,1 +1,32 @@
-<p>page works!</p>
+<h1 style="text-align: center; margin-top: 20px;">Таблица постов</h1>
+<div class="wrapper-table">
+
+<table class="table-posts">
+   <tr>
+   
+    <th style="text-align: center;">
+        id
+    </th>
+    <th style="text-align: center;">
+        title
+    </th>
+    <th style="text-align: center;">
+        body
+    </th>
+    <th style="text-align: center;">
+        Open
+    </th>
+   </tr> 
+
+   <tr *ngFor="let user of userList;let i=index">
+
+    <td>{{user.id}} </td>
+    <td> {{user.title}}</td>
+    <td> {{user.body}}</td>
+    <td> 
+        <button mat-stroked-button color="primary" (click) = "handleOpenPage()" >Открыть</button>
+
+    </td>
+   </tr>
+</table>
+</div>

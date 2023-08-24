@@ -1,4 +1,4 @@
-<div id = "container" [formGroup]="form">
+<!-- <div id = "container" [formGroup]="form">
     <h1>Login</h1>
 
     <input type ='text' formControlName="username" placeholder="Username"/>
@@ -7,4 +7,40 @@
     <button (click) = "login()"> Login</button>
 
     {{form | json}}
+</div> -->
+<div class="wrapper-form">
+<form class="example-form" [formGroup]="form">
+    <h1>{{!isLogin ? 'Авторизация' : 'Регистрация'}}</h1>
+
+    <h1
+     [title]="expression ? 'one' : 'two' "
+    ></h1>
+
+    <!-- <button mat-stroked-button color="primary"
+    (click)="expression = !expression">{{!expression ? 'one' : 'two'}}</button> -->
+
+    <mat-form-field class="example-full-width">
+        <mat-label>Введите логин</mat-label>
+        <input matInput placeholder="логин" formControlName="username" placeholder="логин">
+      </mat-form-field>
+
+      <mat-form-field class="example-full-width">
+        <mat-label>Введите пароль</mat-label>
+        <input  type ='password' matInput placeholder="пароль" formControlName="password" placeholder="пароль">
+      </mat-form-field>
+
+      <div style="display: flex; justify-content: space-between;">
+
+        <div style="display: flex; align-items: start;">
+          <p style="padding-right: 12px;"> {{!isLogin ? 'Нет аккаунта?': 'Есть аккаунт? ' }} </p> <a style="color: blue;" (click)="isLogin = !isLogin">  {{!isLogin ? 'Зарегистрироваться' : 'Войти'}} </a>
+        </div>
+        
+  
+       
+  
+        <button mat-stroked-button color="primary" (click) = "login()"> {{!isLogin ? 'Войти' : 'Регистрация'}} </button>
+      </div>
+
+
+  </form>
 </div>
