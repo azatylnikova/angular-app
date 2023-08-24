@@ -12,12 +12,10 @@
 <form class="example-form" [formGroup]="form">
     <h1>{{!isLogin ? 'Авторизация' : 'Регистрация'}}</h1>
 
-    <h1
-     [title]="expression ? 'one' : 'two' "
-    ></h1>
-
-    <!-- <button mat-stroked-button color="primary"
-    (click)="expression = !expression">{{!expression ? 'one' : 'two'}}</button> -->
+  
+<!-- 
+    <button mat-stroked-button color="primary"
+    (click)="expression = {{this.wrr}}">{{!expression ? 'one' : 'two'}}</button> -->
 
     <mat-form-field class="example-full-width">
         <mat-label>Введите логин</mat-label>
@@ -36,8 +34,7 @@
         </div>
         
   
-       
-  
+        
         <button mat-stroked-button color="primary" (click) = "login()"> {{!isLogin ? 'Войти' : 'Регистрация'}} </button>
       </div>
 
