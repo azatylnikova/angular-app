@@ -12,16 +12,6 @@ import { Router } from '@angular/router';
 })
 export class PageIndexComponent {
   userList: any;
-  _testVariable: string = '';
-
-  @Input() set testVariable(value: string) {
-    this.testVariable = value + '*';
-  }
-  get testVariable(): string {
-    return this._testVariable || this.testVariable;
-  }
-
-  // @Input() testVariable: any;
 
   constructor(
     private httpClient: HttpClient,
@@ -37,7 +27,7 @@ export class PageIndexComponent {
       .get(
         `https://jsonplaceholder.typicode.com/posts/${this.appstore.getIdPost()}`
       )
-      .subscribe((result: any) => {
+      .subscribe((result: object) => {
         console.log(result)
         console.log(result, 'result');
         if (result) {
