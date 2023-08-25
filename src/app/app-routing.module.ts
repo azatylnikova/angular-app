@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { FormAdminComponent } from './components/form/form-admin/form-admin.component';
-import { PageComponent } from './components/posts/page/page.component';
+import { FormAdminComponent } from './components/form-admin/form-admin.component';
+import { PageComponent } from './components/page/page.component';
 import { PageIndexComponent } from './components/page-index/page-index.component';
 
 const routes: Routes = [
@@ -15,7 +15,7 @@ const routes: Routes = [
   component: PageComponent
 },
 {
-  path: 'postsID',
+  path: `postsID/:id`,
   component: PageIndexComponent
 }
 ];

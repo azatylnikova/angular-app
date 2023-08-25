@@ -30,12 +30,12 @@
       <div style="display: flex; justify-content: space-between;">
 
         <div style="display: flex; align-items: start;">
-          <p style="padding-right: 12px;"> {{!isLogin ? 'Нет аккаунта?': 'Есть аккаунт? ' }} </p> <a style="color: blue;" (click)="isLogin = !isLogin">  {{!isLogin ? 'Зарегистрироваться' : 'Войти'}} </a>
+          <p style="padding-right: 12px;"> {{!isLogin ? 'Нет аккаунта?': 'Есть аккаунт? ' }} </p> <a style="color: #3532EA;" (click)="isLogin = !isLogin">  {{!isLogin ? 'Зарегистрироваться' : 'Войти'}} </a>
         </div>
         
-  
+
         
-        <button mat-stroked-button color="primary" (click) = "login()"> {{!isLogin ? 'Войти' : 'Регистрация'}} </button>
+        <button mat-stroked-button class="login" (click) = "login()"> {{!isLogin ? 'Войти' : 'Регистрация'}} </button>
       </div>
 
 

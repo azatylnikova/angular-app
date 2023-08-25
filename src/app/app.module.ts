@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Input, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { HttpClientModule } from '@angular/common/http';
@@ -6,11 +6,9 @@ import { CommonModule } from '@angular/common'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { LayoutComponent } from './components/ui/layout/layout.component';
-import { FormAdminComponent } from './components/form/form-admin/form-admin.component';
+import { FormAdminComponent } from './components/form-admin/form-admin.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 
-import {MatTableModule} from '@angular/material/table';
 
 
 import {
@@ -21,14 +19,14 @@ import {NgIf} from '@angular/common';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatButtonModule} from '@angular/material/button';
-import { PageComponent } from './components/posts/page/page.component';
+import { PageComponent } from './components/page/page.component';
 import { PageIndexComponent } from './components/page-index/page-index.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    LayoutComponent,
     FormAdminComponent,
     PageComponent,
     PageIndexComponent
@@ -41,9 +39,13 @@ import { PageIndexComponent } from './components/page-index/page-index.component
     CommonModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
-    FormsModule, MatFormFieldModule, MatInputModule, ReactiveFormsModule, NgIf , MatButtonModule, MatTableModule
+    FormsModule, MatFormFieldModule, MatInputModule, ReactiveFormsModule, NgIf , MatButtonModule, MatCardModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+
+  @Input() testVariable: any;
+  
+ }

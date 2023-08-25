@@ -1,3 +1,4 @@
+<div class="header"> <button mat-stroked-button class="login" (click)="onLogOut()"> Выйти </button></div>
 <h1 style="text-align: center; margin-top: 20px;">Таблица постов</h1>
 <div class="wrapper-table">
 
@@ -24,7 +25,7 @@
     <td> {{user.title}}</td>
     <td> {{user.body}}</td>
     <td> 
-        <button mat-stroked-button color="primary" (click) = "handleOpenPage(user.id)" >Открыть</button>
+        <button mat-stroked-button class="login" (click) = "handleOpenPage(user.id)"> Открыть </button>
 
     </td>
    </tr>

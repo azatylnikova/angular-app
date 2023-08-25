@@ -1,33 +1,8 @@
-<h1 style="text-align: center; margin-top: 20px;">Таблица постов</h1>
- 
-<div class="wrapper-table">
-
-<table class="table-posts">
-   <tr>
-   
-    <th style="text-align: center;">
-        id
-    </th>
-    <th style="text-align: center;">
-        title
-    </th>
-    <th style="text-align: center;">
-        body
-    </th>
-    <th style="text-align: center;">
-        Open
-    </th>
-   </tr> 
-
-   <tr *ngFor="let user of userList;let i=index">
-
-
-    <td> {{user.title}}</td>
-    <td> {{user.body}}</td>
-    <td> 
-       
-
-    </td>
-   </tr>
-</table>
+<div class="header"> <button mat-stroked-button (click)="onBackOut()"> Назад </button></div>
+<div class="card-wrapper">
+    <mat-card class="card" *ngFor="let user of userList;let i=index">
+        <mat-card-content class="card-tittle">{{user.title}}</mat-card-content>
+        <mat-card-content class="card-conten">{{user.body}}</mat-card-content>
+      </mat-card>
 </div>
+
